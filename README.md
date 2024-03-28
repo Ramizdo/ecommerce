@@ -1,8 +1,11 @@
-# React + Vite
+# Proyecto Final - Curso React ![Logo de React](https://raw.githubusercontent.com/Ramizdo/PreEntrega1-Ramirez/main/src/assets/react.svg)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Ecommerce - Tienda online
 
-Currently, two official plugins are available:
+### PreEntrega1 - Consigna
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Crear 3 componentes**
+
+- NavBar: Cuya funcionalidad es renderizar una barra de menu.
+- CartWidget: Con un icono de carrito y que muestre con un numero hardcodeado la cantidad de articulos que tenemos en el carrito.
+- ItemListContainer : Que reciba una props para mostrar un mensaje de saludo.
