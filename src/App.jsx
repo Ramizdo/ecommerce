@@ -1,12 +1,13 @@
 import "./App.css";
-import NavBar from "./Components/Layout/NavBar/NavBar";
+import { Layout } from "./Components/Layout/Layout";
 import ItemListContainer from "./Components/Pages/ItemListContainer/ItemListContainer";
 
 function App() {
   return (
     <>
-      <NavBar />
-      <ItemListContainer greeting="¡Bienvenidos a tu tienda de Jockey's Favorita!" />
+      <Layout>
+        <ItemListContainer greeting="¡Bienvenidos a tu tienda de Jockey's Favorita!" />
+      </Layout>
     </>
   );
 }
