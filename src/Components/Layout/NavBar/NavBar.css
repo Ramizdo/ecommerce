@@ -1,6 +1,9 @@
 .box {
   padding: 5px;
   background-color: #e63d97;
+  position: fixed;
+  width: 100%;
+  top: 0;
 }
 
 .grid__item {
@@ -23,5 +26,5 @@
 
 .link {
   text-decoration: none;
-  color: black;
+  color: #ffffff;
 }

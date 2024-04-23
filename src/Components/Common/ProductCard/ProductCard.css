@@ -1,0 +1,18 @@
+.card {
+  max-width: 15vw;
+  max-height: 50vh;
+  padding: 3px 3px;
+  /* border: #000 0px solid; */
+  /* box-shadow: 100px 50px 50px black; */
+  /* border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px; */
+}
+
+.card-media {
+  width: 17vw;
+  height: 25vh;
+}
+
+.card-content {
+  width: 17vw;
+}

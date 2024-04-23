@@ -1,4 +1,9 @@
-.titulo {
-  text-align: center;
-  margin-top: 30px;
+.product-card {
+  padding: 120px 250px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 20px;
 }
