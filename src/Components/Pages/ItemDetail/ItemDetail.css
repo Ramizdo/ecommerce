@@ -1,5 +1,5 @@
 .box__detail {
-  padding: 120px 150px;
+  padding: 120px 250px;
   display: flex;
 }
 
@@ -12,7 +12,7 @@
 }
 
 .cardMedia__detail {
-  max-width: 100%;
+  max-width: 80%;
   height: 50vh;
 }
 
@@ -27,16 +27,16 @@
 
 .cardContent__title {
   text-align: justify;
-  color: #FFFFFF;
+  color: #ffffff;
   background-color: #e63d97;
   width: 100%;
   font-size: 1.5rem;
 }
 
 .cardContent__price {
-    text-align: justify;
-    font-size: 1.3rem;
-    color: #000000;
+  text-align: justify;
+  font-size: 1.3rem;
+  color: #000000;
 }
 .cardContent__texto {
   text-align: justify;

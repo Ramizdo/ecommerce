@@ -7,7 +7,7 @@ const CartWidget = () => {
   return (
     <Link to="/cart" className="link">
       <Badge
-        badgeContent={1}
+        badgeContent={3}
         color="secondary"
         anchorOrigin={{
           vertical: "bottom",
