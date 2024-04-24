@@ -1,22 +1,15 @@
-import {
-  Button,
-  Card,
-  CardActions,
-  CardContent,
-  CardMedia,
-  Typography,
-} from "@mui/material";
-import { Link } from "react-router-dom";
-import "./ProductCard.css";
+import { Button } from "@mui/base";
+import { Card, CardActions, CardContent, CardMedia, Typography } from "@mui/material";
+import "./ItemDetail.css";
 
-const ProductCard = ({ img, title, description, price, id }) => {
+const ItemDetail = ( {item} ) => {
   return (
-    <div>
+    <div className="prueba">
       <Card className="card">
         <CardMedia
           className="card-media"
           component="img"
-          image={img}
+          image={item.img}
           title="Gorras"
         />
         <CardContent className="card-content">
@@ -26,7 +19,7 @@ const ProductCard = ({ img, title, description, price, id }) => {
             className="texto"
             component="div"
           >
-            {title}
+            {item.title}
           </Typography>
           <Typography
             variant="body2"
@@ -34,17 +27,15 @@ const ProductCard = ({ img, title, description, price, id }) => {
             className="texto"
             component="div"
           >
-            $ {price}
+            $ {item.price}
           </Typography>
         </CardContent>
         <CardActions>
-          <Link to={`/itemDetail/${id}`}>
-            <Button size="small">Ver Detalle</Button>
-          </Link>
+          <Button size="small">Ver Detalle</Button>
         </CardActions>
       </Card>
     </div>
   );
 };
 
-export default ProductCard;
+export default ItemDetail;

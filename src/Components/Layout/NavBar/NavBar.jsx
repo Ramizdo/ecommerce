@@ -1,4 +1,5 @@
 import { Box, Grid, Typography } from "@mui/material";
+import { Link } from "react-router-dom";
 import CartWidget from "../../Common/CartWidget/CartWidget";
 import Logo from "../Logo/Logo";
 import "./NavBar.css";
@@ -13,24 +14,24 @@ const NavBar = () => {
           </Grid>
           <Grid item className="grid__item" xs={4}>
             <Typography>
-              <a href="#" className="link">
+              <Link to="/" className="link">
                 TODAS
-              </a>
+              </Link>
             </Typography>
             <Typography>
-              <a href="#" className="link">
+              <Link to="/category/MLB" className="link">
                 MLB
-              </a>
+              </Link>
             </Typography>
             <Typography>
-              <a href="#" className="link">
+              <Link to="/category/NBA" className="link">
                 NBA
-              </a>
+              </Link>
             </Typography>
             <Typography>
-              <a href="#" className="link">
+              <Link to="/category/NFL" className="link">
                 NFL
-              </a>
+              </Link>
             </Typography>
           </Grid>
           <Grid item className="grid__item" xs={4}>
