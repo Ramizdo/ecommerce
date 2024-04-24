@@ -44,7 +44,7 @@ export let products = [
     title: "Miami Heat",
     price: 32990,
     description:
-      "equipo profesional de baloncesto de los Estados Unidos con sede en Miami, Florida.",
+      "Equipo profesional de baloncesto de los Estados Unidos con sede en Miami, Florida.",
     img: "https://res.cloudinary.com/dhoq9gmwh/image/upload/v1713819789/gorra-new-era-miami-heat-59fifty-otc-w3t000117-1_1_1_iq3lw7.jpg",
     stock: 12,
     category: "NBA",
@@ -54,7 +54,7 @@ export let products = [
     title: "Boston Red Sox",
     price: 39990,
     description:
-      "equipo de béisbol profesional estadounidense con sede en Boston, Massachusetts.",
+      "Equipo de béisbol profesional estadounidense con sede en Boston, Massachusetts.",
     img: "https://res.cloudinary.com/dhoq9gmwh/image/upload/v1713819619/gorra-new-era-boston-red-sox-mlb-authentic-59fifty-70331911-1_1_xoxbbv.jpg",
     stock: 3,
     category: "MLB",
@@ -64,7 +64,7 @@ export let products = [
     title: "Chicago White Sox",
     price: 19990,
     description:
-      "equipo profesional de béisbol de los Estados Unidos con sede en Chicago, Illinois.",
+      "Equipo profesional de béisbol de los Estados Unidos con sede en Chicago, Illinois.",
     img: "https://res.cloudinary.com/dhoq9gmwh/image/upload/v1713819683/gorra-new-era-chicago-white-sox-mlb-ice-latte-59fifty-60416038-1_1_1_u300mc.jpg",
     stock: 7,
     category: "MLB",
@@ -74,7 +74,7 @@ export let products = [
     title: "New York Mets",
     price: 21990,
     description:
-      "equipo profesional de béisbol de los Estados Unidos con sede en la ciudad de Nueva York.",
+      "Equipo profesional de béisbol de los Estados Unidos con sede en la ciudad de Nueva York.",
     img: "https://res.cloudinary.com/dhoq9gmwh/image/upload/v1713819685/gorra-new-era-new-york-mets-mlb-coop-wool-59fifty-w3t000137-1_1_1_t2v8ng.jpg",
     stock: 2,
     category: "MLB",
@@ -84,7 +84,7 @@ export let products = [
     title: "New York Yankees",
     price: 39900,
     description:
-      "equipo de béisbol estadounidense con sede en el distrito de El Bronx.",
+      "Equipo de béisbol estadounidense con sede en el distrito de El Bronx.",
     img: "https://res.cloudinary.com/dhoq9gmwh/image/upload/v1713819684/gorra-new-era-new-york-yankees-mlb-basic-59fifty-w3t000130-1_1_2_1__1_d7hlso.jpg",
     stock: 12,
     category: "MLB",
@@ -104,7 +104,7 @@ export let products = [
     title: "New England Patriots",
     price: 17990,
     description:
-      "equipo de fútbol americano profesional con sede en el área metropolitana de Boston.",
+      "Equipo de fútbol americano profesional con sede en el área metropolitana de Boston.",
     img: "https://res.cloudinary.com/dhoq9gmwh/image/upload/v1713819974/gorra-new-era-new-england-patriots-9fifty-nfl-basic-w3t000097601-1_1_a7ztgy.jpg",
     stock: 5,
     category: "NFL",
@@ -114,7 +114,7 @@ export let products = [
     title: "New York Giants",
     price: 14990,
     description:
-      "equipo profesional de fútbol americano de los Estados Unidos con sede en el área metropolitana de Nueva York.",
+      "Equipo profesional de fútbol americano de los Estados Unidos con sede en el área metropolitana de Nueva York.",
     img: "https://res.cloudinary.com/dhoq9gmwh/image/upload/v1713819977/gorra-new-era-new-york-giants-59fifty-citrus-pop-60288286-1_1_buhcpt.jpg",
     stock: 2,
     category: "NFL",
@@ -124,7 +124,7 @@ export let products = [
     title: "Pittsburgh Steelers",
     price: 9990,
     description:
-      "equipo profesional de fútbol americano de los Estados Unidos con sede en Pittsburgh, Pensilvania.",
+      "Equipo profesional de fútbol americano de los Estados Unidos con sede en Pittsburgh, Pensilvania.",
     img: "https://res.cloudinary.com/dhoq9gmwh/image/upload/v1713819978/gorra-new-era-pittsburgh-steelers-9fifty-nfl-basic-11872948-1_1_xbyuhh.jpg",
     stock: 7,
     category: "NFL",
