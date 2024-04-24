@@ -1,9 +1,9 @@
 .footer {
-  background-color: blueviolet;
-  position: fixed;
-  bottom: 0;
-  color: #000000;
-  width: 100%;
-  min-height: 100vh;
-  text-align: center;
+  background-color: #e63d97;
+  color: #ffffff;
+  margin-top: auto;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
