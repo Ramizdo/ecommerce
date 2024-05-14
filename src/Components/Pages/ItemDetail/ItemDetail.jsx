@@ -8,6 +8,7 @@ import {
   Grid,
   Typography,
 } from "@mui/material";
+import { CounterContainer } from "../../Common/Counter/CounterContainer";
 import "./ItemDetail.css";
 
 const ItemDetail = ({ item }) => {
@@ -65,9 +66,12 @@ const ItemDetail = ({ item }) => {
                 <h3>$ {item.price}</h3>
               </div>
               <div className="cardContent__texto">Stock: {item.stock}</div>
-              <div className="cardContent__texto">Categoria: {item.category}</div>
+              <div className="cardContent__texto">
+                Categoria: {item.category}
+              </div>
               <div className="cardContent__texto">{item.description}</div>
             </CardContent>
+            <CounterContainer stock={item.stock}/>
           </Grid>
         </Grid>
       </Box>
