@@ -1,9 +1,12 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { products } from "../../../productsMock";
 import ItemList from "./ItemList";
-import { Skeleton } from "@mui/material";
+import { CircularProgress, Skeleton, Stack } from "@mui/material";
 import "./ItemListContainer.css";
+import { db } from "../../../firebaseConfig";
+import { collection, getDocs, query, where, addDoc } from "firebase/firestore";
+import { products } from "../../../productsMock";
+
 
 const ItemListContainer = () => {
   const { name } = useParams();
@@ -12,23 +15,23 @@ const ItemListContainer = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    let productoFiltrado = products.filter(
-      (product) => product.category === name
-    );
-
-    const getProducts = new Promise((resolve, reject) => {
-      let respuesta = true;
-      if (respuesta) {
-        setTimeout(() => {
-          resolve(name ? productoFiltrado : products);
-        }, 1500);
-      } else {
-        reject({ error });
-      }
+    const productsCollection = collection(db, "products");
+    let consulta = productsCollection;
+    if (name) {
+      consulta = query(productsCollection, where("category", "==", name));
+    }
+    getDocs(consulta).then((respuesta) => {
+      let newArray = respuesta.docs.map((document) => {
+        return { id: document.id, ...document.data() };
+      }); // []
+      setItems(newArray);
     });
-
-    getProducts.then((res) => setItems(res)).catch((error) => setError(error));
   }, [name]);
+
+  // const addDocsProducts = () => {
+  //   let productsCollection = collection(db, "products")
+  //   products.forEach((product) => addDoc(productsCollection, product))
+  // }
 
   if (items.length === 0) {
     return (
@@ -141,7 +144,19 @@ const ItemListContainer = () => {
     );
   }
 
-  return <ItemList items={items} error={error} />;
+  return (
+  <>
+  <h1>Bienvenidos</h1>
+{items.length > 0 ? (
+  <ItemList items={items} error={error} />
+) : (
+<Stack sx={{ color: 'grey.500' }} spacing={2} direction="row">
+<CircularProgress color="secondary" />
+</Stack>
+)}
+{/* <button onClick={addDocsProducts}>Agregar</button> */}
+  </>
+  )
 };
 
 export default ItemListContainer;

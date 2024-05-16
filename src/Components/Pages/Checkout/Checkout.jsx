@@ -1,12 +1,22 @@
 import { Button } from "@mui/base";
 import { InputAdornment, TextField } from "@mui/material";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { CartContext } from "../../../Context/CartContext";
 import "./Checkout.css";
+import { db } from "../../../firebaseConfig";
+import { addDoc, collection, doc, updateDoc } from "firebase/firestore";
 
 export const Checkout = () => {
+
+    const {cart, getTotalPrice, clearCart} = useContext(CartContext)
+
+    const [orderId, setOrderId] = useState(null)
+
+    let total = getTotalPrice()
+
   const [info, setInfo] = useState({
-    nombre: "",
-    telefono: "",
+    name: "",
+    phone: "",
     email: "",
   });
 
@@ -18,11 +28,35 @@ export const Checkout = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log(info)
+    let objeto = {
+        buyer: info,
+        items: cart,
+        total
+    }
+
+    let ordersCollection = collection(db, "orders");
+    addDoc(ordersCollection, objeto)
+      .then((respuesta) => setOrderId(respuesta.id))
+      .catch((error) => console.log(error));
+
+    // update de todos los productos que compramos
+    // let productsCollection = collection(db, "products")
+
+    cart.forEach((product) => {
+      let referenciaDocumento = doc(db, "products", product.id);
+      updateDoc(referenciaDocumento, { stock: product.stock - product.quantity });
+    });
+
+    clearCart();
+
   };
 
   return ( 
     <>
     <div className="prueba">
+    {orderId ? (
+        <h1>su id es: {orderId} </h1>
+      ) : (
       <form onSubmit={handleSubmit}>
         <TextField
           variant="outlined"
@@ -57,6 +91,7 @@ export const Checkout = () => {
           enviar
         </Button>
       </form>
+      )}
     </div>
     </>
   );

@@ -1,16 +1,5 @@
 export let products = [
   {
-    id: 1,
-    title: "Boston celtics",
-    price: 19990,
-    description:
-      "Equipo profesional de baloncesto de los Estados Unidos con sede en Boston, Massachusetts. ",
-    img: "https://res.cloudinary.com/dhoq9gmwh/image/upload/v1713819912/gorra-new-era-boston-celtics-nba20-9fifty-w3t000282-1_1_1_1_perr8w.jpg",
-    stock: 12,
-    category: "NBA",
-  },
-  {
-    id: 2,
     title: "Chicago Bulls",
     price: 25990,
     description:
@@ -20,7 +9,6 @@ export let products = [
     category: "NBA",
   },
   {
-    id: 3,
     title: "Golden State Warriors",
     price: 32990,
     description:
@@ -30,7 +18,6 @@ export let products = [
     category: "NBA",
   },
   {
-    id: 4,
     title: "Denver Nuggets",
     price: 32990,
     description:
@@ -40,7 +27,6 @@ export let products = [
     category: "NBA",
   },
   {
-    id: 5,
     title: "Miami Heat",
     price: 32990,
     description:
@@ -50,7 +36,6 @@ export let products = [
     category: "NBA",
   },
   {
-    id: 6,
     title: "Boston Red Sox",
     price: 39990,
     description:
@@ -60,17 +45,6 @@ export let products = [
     category: "MLB",
   },
   {
-    id: 7,
-    title: "Chicago White Sox",
-    price: 19990,
-    description:
-      "Equipo profesional de béisbol de los Estados Unidos con sede en Chicago, Illinois.",
-    img: "https://res.cloudinary.com/dhoq9gmwh/image/upload/v1713819683/gorra-new-era-chicago-white-sox-mlb-ice-latte-59fifty-60416038-1_1_1_u300mc.jpg",
-    stock: 7,
-    category: "MLB",
-  },
-  {
-    id: 8,
     title: "New York Mets",
     price: 21990,
     description:
@@ -80,7 +54,6 @@ export let products = [
     category: "MLB",
   },
   {
-    id: 9,
     title: "New York Yankees",
     price: 39900,
     description:
@@ -90,7 +63,6 @@ export let products = [
     category: "MLB",
   },
   {
-    id: 10,
     title: "Kansas City Chiefs",
     price: 19990,
     description:
@@ -100,7 +72,6 @@ export let products = [
     category: "NFL",
   },
   {
-    id: 11,
     title: "New England Patriots",
     price: 17990,
     description:
@@ -110,7 +81,6 @@ export let products = [
     category: "NFL",
   },
   {
-    id: 12,
     title: "New York Giants",
     price: 14990,
     description:
@@ -120,7 +90,6 @@ export let products = [
     category: "NFL",
   },
   {
-    id: 13,
     title: "Pittsburgh Steelers",
     price: 9990,
     description:
