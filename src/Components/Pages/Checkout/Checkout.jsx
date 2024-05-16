@@ -27,7 +27,6 @@ export const Checkout = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(info)
     let objeto = {
         buyer: info,
         items: cart,
