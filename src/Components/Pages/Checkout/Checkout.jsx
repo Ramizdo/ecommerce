@@ -17,6 +17,7 @@ export const Checkout = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    console.log(info)
   };
 
   return ( 
@@ -44,14 +45,14 @@ export const Checkout = () => {
           onChange={handleChange}
           name="email"
         />
-        <TextField
+        {/* <TextField
           label="With normal TextField"
           id="outlined-start-adornment"
           sx={{ m: 1, width: '25ch' }}
           InputProps={{
             startAdornment: <InputAdornment position="start">kg</InputAdornment>,
           }}
-        />
+        /> */}
         <Button type="submit" variant="contained">
           enviar
         </Button>

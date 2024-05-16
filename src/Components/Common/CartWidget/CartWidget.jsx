@@ -3,11 +3,12 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import "./CartWidget.css";
 import { Link } from "react-router-dom";
 
-const CartWidget = () => {
+const CartWidget = ({total}) => {
+
   return (
     <Link to="/cart" className="link">
       <Badge
-        badgeContent={3}
+        badgeContent={total}
         color="secondary"
         anchorOrigin={{
           vertical: "bottom",

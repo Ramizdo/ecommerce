@@ -1,6 +1,6 @@
 import { Box, Grid, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
-import CartWidget from "../../Common/CartWidget/CartWidget";
+import CartWidgetContainer from "../../Common/CartWidget/CartWidgetContainer";
 import Logo from "../Logo/Logo";
 import "./NavBar.css";
 
@@ -35,7 +35,7 @@ const NavBar = () => {
             </Typography>
           </Grid>
           <Grid item className="grid__item" xs={4}>
-            <CartWidget />
+            <CartWidgetContainer />
           </Grid>
         </Grid>
       </Box>
