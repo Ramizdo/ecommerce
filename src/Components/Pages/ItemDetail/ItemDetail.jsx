@@ -70,8 +70,8 @@ const ItemDetail = ({ item, onAdd, initialValue }) => {
                 Categoria: {item.category}
               </div>
               <div className="cardContent__texto">{item.description}</div>
-            </CardContent>
             <CounterContainer stock={item.stock} onAdd={onAdd} initialValue={initialValue}/>
+            </CardContent>
           </Grid>
         </Grid>
       </Box>

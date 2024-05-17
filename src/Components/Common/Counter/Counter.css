@@ -1,0 +1,13 @@
+.button-color {
+  color: #ffffff;
+  background-color: #e63d97;
+}
+
+.botonera {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
