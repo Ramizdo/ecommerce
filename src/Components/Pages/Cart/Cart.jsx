@@ -1,4 +1,3 @@
-// import { Button } from "@mui/base";
 import { Link } from "react-router-dom";
 import "./Cart.css";
 import {
@@ -45,9 +44,7 @@ const Cart = ({ cart, clearCart, deleteCartById, total }) => {
             </TableHead>
             <TableBody>
               {cart.map((product) => (
-                <TableRow
-                  key={product.id}
-                >
+                <TableRow key={product.id}>
                   <TableCell
                     className="cell-container"
                     component="th"
@@ -84,7 +81,9 @@ const Cart = ({ cart, clearCart, deleteCartById, total }) => {
 
       {cart.length > 0 && (
         <>
-          <Typography className="sub-titulo" variant="h5">El total a pagar es: ${total}</Typography>
+          <Typography className="sub-titulo" variant="h5">
+            El total a pagar es: ${total}
+          </Typography>
 
           <div className="botoneraEnCarrito">
             <ButtonGroup variant="contained" aria-label="Basic button group">

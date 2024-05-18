@@ -1,11 +1,5 @@
 // import { Button } from "@mui/base";
-import {
-  Button,
-  Box,
-  InputAdornment,
-  TextField,
-  Typography,
-} from "@mui/material";
+import { Button, Box, TextField, Typography } from "@mui/material";
 import { useContext, useState } from "react";
 import { CartContext } from "../../../Context/CartContext";
 import "./Checkout.css";
@@ -44,9 +38,6 @@ export const Checkout = () => {
       .then((respuesta) => setOrderId(respuesta.id))
       .catch((error) => console.log(error));
 
-    // update de todos los productos que compramos
-    // let productsCollection = collection(db, "products")
-
     cart.forEach((product) => {
       let referenciaDocumento = doc(db, "products", product.id);
       updateDoc(referenciaDocumento, {
@@ -73,9 +64,6 @@ export const Checkout = () => {
               className="prueba"
               component="form"
               onSubmit={handleSubmit}
-              // sx={{
-              //   "& > :not(style)": { m: 1, width: "25ch" },
-              // }}
               noValidate
               autoComplete="off"
             >
@@ -115,49 +103,11 @@ export const Checkout = () => {
                 fullWidth
                 onChange={handleChange}
               />
-              {/* <TextField id="password" label="Password" variant="outlined" type="password" fullWidth/> */}
+
               <Button type="submit" variant="contained">
                 enviar
               </Button>
             </Box>
-
-            //   <form onSubmit={handleSubmit}>
-            //     <TextField
-            //       variant="outlined"
-            //       type="text"
-            //       label="Nombre"
-            //       onChange={handleChange}
-            //       name="nombre"
-            //       fullWidth
-            //     />
-            //     <TextField
-            //       variant="outlined"
-            //       type="text"
-            //       label="Telefono"
-            //       onChange={handleChange}
-            //       name="telefono"
-            //       fullWidth
-            //     />
-            //     <TextField
-            //       variant="outlined"
-            //       type="text"
-            //       label="Email"
-            //       onChange={handleChange}
-            //       name="email"
-            //       fullWidth
-            //     />
-            //     {/* <TextField
-            //   label="With normal TextField"
-            //   id="outlined-start-adornment"
-            //   sx={{ m: 1, width: '25ch' }}
-            //   InputProps={{
-            //     startAdornment: <InputAdornment position="start">kg</InputAdornment>,
-            //   }}
-            // /> */}
-            //     <Button type="submit" variant="contained">
-            //       enviar
-            //     </Button>
-            //   </form>
           )}
         </div>
       </div>
