@@ -1,4 +1,17 @@
 .prueba {
-    padding: 120px 250px;
-  }
-  
+  padding: 0px 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+}
+
+.titulo {
+  padding: 150px 250px 0px 250px;
+  text-align: left;
+}
+
+.sub-titulo {
+  text-align: left;
+  padding: 30px 250px;
+}

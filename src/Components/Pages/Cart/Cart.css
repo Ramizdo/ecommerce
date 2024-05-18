@@ -3,6 +3,11 @@
   text-align: left;
 }
 
+.sub-titulo{
+  text-align: right;
+  padding: 30px 250px;
+}
+
 .box-table {
   padding: 10px 250px;
   display: flex;
@@ -19,6 +24,22 @@
 }
 
 .cardMedia__cart{
-  max-width: 30%;
+  width: 7vw;
   height: 10vh;
+}
+
+.cell-container {
+  width: 9vw;
+  height: 10vh;
+}
+
+.botoneraEnCarrito {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 0px 250px;
+  gap: 20px;
 }
