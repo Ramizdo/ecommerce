@@ -28,124 +28,19 @@ const ItemListContainer = () => {
 
   if (items.length === 0) {
     return (
-      <div className="product-card">
-        <div>
-          <Skeleton
-            variant="rectangular"
-            sx={{ fontSize: "1rem" }}
-            height={250}
-            width={250}
-          />
-          <Skeleton
-            variant="text"
-            sx={{ fontSize: "0.5rem" }}
-            height={60}
-            width={250}
-          />
-          <Skeleton
-            variant="text"
-            sx={{ fontSize: "0.5rem" }}
-            height={20}
-            width={250}
-          />
-          <Skeleton
-            variant="text"
-            sx={{ fontSize: "0.5rem" }}
-            height={40}
-            width={250}
-          />
-        </div>
-        <div>
-          <Skeleton
-            variant="rectangular"
-            sx={{ fontSize: "1rem" }}
-            height={250}
-            width={250}
-          />
-          <Skeleton
-            variant="text"
-            sx={{ fontSize: "0.5rem" }}
-            height={60}
-            width={250}
-          />
-          <Skeleton
-            variant="text"
-            sx={{ fontSize: "0.5rem" }}
-            height={20}
-            width={250}
-          />
-          <Skeleton
-            variant="text"
-            sx={{ fontSize: "0.5rem" }}
-            height={40}
-            width={250}
-          />
-        </div>
-        <div>
-          <Skeleton
-            variant="rectangular"
-            sx={{ fontSize: "1rem" }}
-            height={250}
-            width={250}
-          />
-          <Skeleton
-            variant="text"
-            sx={{ fontSize: "0.5rem" }}
-            height={60}
-            width={250}
-          />
-          <Skeleton
-            variant="text"
-            sx={{ fontSize: "0.5rem" }}
-            height={20}
-            width={250}
-          />
-          <Skeleton
-            variant="text"
-            sx={{ fontSize: "0.5rem" }}
-            height={40}
-            width={250}
-          />
-        </div>
-        <div>
-          <Skeleton
-            variant="rectangular"
-            sx={{ fontSize: "1rem" }}
-            height={250}
-            width={250}
-          />
-          <Skeleton
-            variant="text"
-            sx={{ fontSize: "0.5rem" }}
-            height={60}
-            width={250}
-          />
-          <Skeleton
-            variant="text"
-            sx={{ fontSize: "0.5rem" }}
-            height={20}
-            width={250}
-          />
-          <Skeleton
-            variant="text"
-            sx={{ fontSize: "0.5rem" }}
-            height={40}
-            width={250}
-          />
-        </div>
+      <div className="loading">
+        <CircularProgress size={80} />
       </div>
     );
   }
 
   return (
     <>
-      <h1>Bienvenidos</h1>
+      <h1 className="titulo2">Bienvenidos a JOCKEY's Store</h1>
       {items.length > 0 ? (
         <ItemList items={items} error={error} />
       ) : (
-        <Stack sx={{ color: "grey.500" }} spacing={2} direction="row">
-          <CircularProgress color="secondary" />
-        </Stack>
+        <CircularProgress />
       )}
     </>
   );

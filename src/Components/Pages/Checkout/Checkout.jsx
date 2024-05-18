@@ -5,6 +5,7 @@ import { CartContext } from "../../../Context/CartContext";
 import "./Checkout.css";
 import { db } from "../../../firebaseConfig";
 import { addDoc, collection, doc, updateDoc } from "firebase/firestore";
+import Swal from "sweetalert2";
 
 export const Checkout = () => {
   const { cart, getTotalPrice, clearCart } = useContext(CartContext);
@@ -45,6 +46,14 @@ export const Checkout = () => {
       });
     });
 
+    Swal.fire({
+      position: "center",
+      icon: "success",
+      iconColor: "#e63d97",
+      title: "¡Compra exitosa!",
+      showConfirmButton: false,
+      timer: 4500,
+    });
     clearCart();
   };
 
@@ -58,7 +67,7 @@ export const Checkout = () => {
 
         <div className="prueba">
           {orderId ? (
-            <h1>su id es: {orderId} </h1>
+            <h1>Gracias por su compra, el numero de orden es: {orderId} </h1>
           ) : (
             <Box
               className="prueba"
@@ -74,6 +83,7 @@ export const Checkout = () => {
                 variant="outlined"
                 type="text"
                 fullWidth
+                required
                 onChange={handleChange}
               />
               <TextField
@@ -83,6 +93,7 @@ export const Checkout = () => {
                 variant="outlined"
                 type="text"
                 fullWidth
+                required
                 onChange={handleChange}
               />
               <TextField
@@ -92,6 +103,7 @@ export const Checkout = () => {
                 variant="outlined"
                 type="tel"
                 fullWidth
+                required
                 onChange={handleChange}
               />
               <TextField
@@ -101,11 +113,12 @@ export const Checkout = () => {
                 variant="outlined"
                 type="email"
                 fullWidth
+                required
                 onChange={handleChange}
               />
 
               <Button type="submit" variant="contained">
-                enviar
+                Enviar
               </Button>
             </Box>
           )}

@@ -16,8 +16,42 @@ import {
   Typography,
 } from "@mui/material";
 import DeleteIcon from "@mui/icons-material/Delete";
+import Swal from "sweetalert2";
 
 const Cart = ({ cart, clearCart, deleteCartById, total }) => {
+
+  const clearCartAlert = () => {
+    
+    Swal.fire({
+      title: "Seguro quieres vaciar el carrito?",
+      position: "center",
+      icon: "question",
+      iconColor: "#e63d97",
+      showConfirmButton: true,
+      showCancelButton: true,
+      cancelButtonColor: "#e63d97",
+      confirmButtonText: "Ok",
+      confirmButtonColor: "#e63d97",
+      
+    }).then((res) => {
+      if (res.isConfirmed) {
+        clearCart();
+        Swal.fire({
+          title: "¡Carrito vacio!",
+          icon: "success",
+          iconColor: "#e63d97",
+          showConfirmButton: false,
+        });
+      } else if (res.isDenied) {
+        Swal.fire({
+          title: "No fue borrado",
+          icon: "info",
+          iconColor: "#e63d97",
+        });
+      }
+    });
+  };
+
   return (
     <div>
       <h1 className="titulo">Carrito:</h1>
@@ -87,7 +121,7 @@ const Cart = ({ cart, clearCart, deleteCartById, total }) => {
 
           <div className="botoneraEnCarrito">
             <ButtonGroup variant="contained" aria-label="Basic button group">
-              <Button onClick={clearCart}>Vaciar carrito</Button>
+              <Button onClick={clearCartAlert}>Vaciar carrito</Button>
             </ButtonGroup>
             <ButtonGroup variant="contained" aria-label="Basic button group">
               <Link to="/checkout">

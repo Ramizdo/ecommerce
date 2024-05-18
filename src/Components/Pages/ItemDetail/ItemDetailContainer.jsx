@@ -4,6 +4,8 @@ import { CartContext } from "../../../Context/CartContext";
 import ItemDetail from "./ItemDetail";
 import { db } from "../../../firebaseConfig";
 import { collection, doc, getDoc } from "firebase/firestore";
+import Swal from "sweetalert2";
+
 
 const ItemDetailContainer = () => {
   const { id } = useParams();
@@ -26,6 +28,16 @@ const ItemDetailContainer = () => {
     let product = { ...item, quantity: cantidad };
 
     addToCart(product)
+
+    Swal.fire({
+      position: "center",
+      icon: "success",
+      iconColor: "#e63d97",
+      title: "Agregado con exito",
+      showConfirmButton: false,
+      timer: 2500,
+    });
+
   };
 
   return <ItemDetail item={item} onAdd={onAdd} initialValue={initialValue}/>;

@@ -1,9 +1,24 @@
 .product-card {
-  padding: 120px 250px;
+  padding: 100px 250px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-evenly;
   gap: 20px;
+}
+
+.loading {
+  padding: 50vh 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #e63d97;
+}
+
+.titulo2 {
+  padding: 120px 250px 0px 250px;
+  text-align: left;
+  color: #e63d97;
 }
